@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="./logos/hamburguesa.png" class="logo"></a>
+            <div class="toogle" onclick="toogleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Nuevo</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </header>
+        <div class="content">
+           <div class="textBox">
+               <h2>Con los mejores ingredientes <span>Burger</span></h2>
+               <p>
+                   Disfrutalo con quienes más quieres, con los mejores productos y al mejor precio.
+               </p>
+               <a href="#">Ver Más</a>
+           </div> 
+           <div class="imgBox">
+            <img src="./logos/burger1.png" class="burger">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="./logos/burger2.png" onclick="imgSlider('./logos/burger2.png'); colorQuery('#017143')"></li>
+            <li><img src="./logos/burger4.png"onclick="imgSlider('./logos/burger4.png'); colorQuery('#123454')"></li>
+            <li><img src="./logos/burger5.png"onclick="imgSlider('./logos/burger5.png');colorQuery('#865678')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href=""><img src="./logos/face.png.crdownload"></a></li>
+            <li><a href=""><img src="./logos/you.png"></a></li>
+            <li><a href=""><img src=""></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.burger').src=anything;
+        }
+
+        function colorQuery(color){
+            const col=document.querySelector('.circle');
+            col.style.background=color;
+        }
+
+        function toogleMenu(){
+            var menuToogle = document.querySelector('.toogle');
+            var navigator = document.querySelector('.navigation')
+            menuToogle.classList.toggle('active')
+            navigator.classList.toggle('active')
+        }
+
+    </script>
+</body>
+</html>
